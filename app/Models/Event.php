@@ -15,6 +15,7 @@ class Event extends Model
         'start_date',
         'end_date',
         'event_color',
-        'event_border_color'
+        'event_border_color',
+        'user_id'
         ];
     }
