@@ -13,16 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('training_fb', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at');
-            $table->string('password');
-            $table->rememberToken();
-            $table->boolean('is_player')->default(false);
-            $table->boolean('is_staff')->default(false);
-            $table->foreignId('team_id')->nullable()->constrained();
+            $table->text('comment');
+            $table->foreignId('user_id')->nullable()->constrained();
+            $table->foreignId('training_id')->nullable()->constrained();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -35,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('training_fb');
     }
 };
