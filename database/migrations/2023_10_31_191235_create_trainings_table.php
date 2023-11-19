@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->dateTime('date');
             $table->integer('value');
-            $table->text('comment');
+            $table->text('comment')->nullable();
             $table->foreignId('training_kind_id')->constrained('training_kind');
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
