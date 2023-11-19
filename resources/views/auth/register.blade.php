@@ -44,12 +44,15 @@
         
           <div class="flex items-center mt-4">
             <x-input-label for="is_player" :value="__('選手')" />
-            <x-text-input id="is_player" class="block w-7" type="checkbox" name="is_player" value="true" />
+            <x-text-input id="is_player" class="block w-7" type="radio" name="is_player" value=1 checked />
             
-              <div class="flex items-center ml-2">
-                <x-input-label for="is_staff" :value="__('スタッフ')" />
-                <x-text-input id="is_staff" class="block w-7" type="checkbox" name="is_staff" value="false" />
-              </div>
+            <x-input-label for="is_staff" :value="__('スタッフ')" />
+            <x-text-input id="is_staff" class="block w-7" type="radio" name="is_player" value=0 />
+
+              <!--<div class="flex items-center ml-2">-->
+              <!--  <x-input-label for="is_staff" :value="__('スタッフ')" />-->
+              <!--  <x-text-input id="is_staff" class="block w-7" type="checkbox" name="is_staff" value="false" />-->
+              <!--</div>-->
           </div>
 
 

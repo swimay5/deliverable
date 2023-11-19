@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->boolean('is_player')->default(false);
-            $table->boolean('is_staff')->default(false);
+            //$table->boolean('is_staff')->default(false);
             $table->foreignId('team_id')->nullable()->constrained();
             $table->timestamps();
             $table->softDeletes();

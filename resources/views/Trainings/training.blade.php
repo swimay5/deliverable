@@ -1,6 +1,6 @@
 <x-app-layout>
     <h1>TRAINING</h1>
-    <form action="/training/{{$date}}/store" method="POST">
+    <form action="/training/{{$date}}/store" method="POST" enctype="multipart/form-data">
         @csrf
         <h2>
             {{$date}}
@@ -26,6 +26,10 @@
         <div>
             <h2>コメント</h2>
             <textarea name='training[comment]'></textarea>
+        </div>
+        <div class="image">
+            <h2>画像をアップロード</h2>
+            <input type="file" name="image">
         </div>
         <input type="submit" value="登録"/>
     </form>
