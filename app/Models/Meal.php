@@ -10,12 +10,12 @@ class Meal extends Model
     use HasFactory;
     
     protected $fillable = [
-        'date',
-        'time',
+        'date_time',
         'red_ingredient',
         'yellow_ingredient',
         'green_ingredient',
-        'comment'
+        'comment',
+        'meal_time_id'
         ];
     public function user(){
         return $this->belongsTo(User::class);

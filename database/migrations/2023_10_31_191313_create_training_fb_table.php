@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('training_fb', function (Blueprint $table) {
             $table->id();
-            $table->text('comment');
+            $table->text('comment')->nullable()->constrained();
             $table->foreignId('user_id')->nullable()->constrained();
             $table->foreignId('training_id')->nullable()->constrained();
             $table->timestamps();

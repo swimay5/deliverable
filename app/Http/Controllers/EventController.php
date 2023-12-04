@@ -39,6 +39,7 @@ class EventController extends Controller
             ->where('end_date', '>', $start_date)
             ->where('start_date', '<', $end_date) // AND条件
             ->where('user_id', Auth::id())
+            ->orderBy('event_title', 'desc')
             ->get();
     }
 }

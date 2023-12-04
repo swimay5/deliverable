@@ -52,8 +52,12 @@ class User extends Authenticatable
         return $this->hasMany(Training::class);
     }
     
-        public function training_fb(){
+    public function training_fb(){
         return $this->hasMany(TrainingFb::class);
+    }
+    
+    public function meal_time(){
+        return $this->hasMany(MealTime::class);
     }
     
 }

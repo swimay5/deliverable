@@ -15,7 +15,11 @@ return new class extends Migration
     {
         Schema::create('condition_fb', function (Blueprint $table) {
             $table->id();
+            $table->string('comment')->nullable()->constrained();
+            $table->foreignId('user_id')->nullable()->constrained();
+            $table->foreignId('condition_id')->nullable()->constrained();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
