@@ -9,6 +9,8 @@ class MealDetail extends Model
 {
     use HasFactory;
     
+    protected $table = 'meal_detail';
+    
     protected $fillable = [
         'image',
         'movie',

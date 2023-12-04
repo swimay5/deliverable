@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('movie')->nullable();
             $table->string('document')->nullable();
+            $table->text('comment')->nullable()->constrained();
             $table->foreignId('meal_id')->nullable()->constrained();
             $table->timestamps();
             $table->softDeletes();

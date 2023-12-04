@@ -4,22 +4,16 @@
             {{ __('HOME') }}
         </h2>
     </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("ホーム画面です") }}
-                </div>
-            </div>
-        </div>
-    </div>
-    
 	<div id="calendar"></div>
 	<div>
 	    <form method="post" action="/calendar/create" id="calendarCreate">
 	        @csrf
-	    <input type='date' id='date' name='date'/>
+	    	<input type='date' class="hidden" id='date' name='date'/>
+	    </form>
+	    
+	    <form method="post" action="/calendar/display" id="calendarDisplay">
+	        @csrf
+	    	<input type="text" class="hidden" id="id" name="id" value="" />
 	    </form>
 	</div>
 </x-app-layout>

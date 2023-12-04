@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\MealController;
+use App\Http\Controllers\ConditionController;
 
 use App\Http\Controllers\EventController;
 /*
@@ -29,12 +31,24 @@ Route::controller(HomeController::class)->middleware(['auth', 'verified'])->grou
     Route::get('/home', 'show')->name('home');
     Route::get('/home/{training}', 'post')->name('create-training');
     Route::post('/calendar/create', 'create');
+    Route::post('calendar/display', 'display');
     Route::get('/menu/{date}/{menu}', 'menu');
+    //Route::get('/calendar/create', 'create');
 });
 
 Route::controller(TrainingController::class)->middleware(['auth', 'verified'])->group(function(){
     Route::get('/training/{id}', 'create')->name('create');
     Route::post('/training/{date}/store','store');
+});
+
+Route::controller(MealController::class)->middleware(['auth', 'verified'])->group(function(){
+    //Route::get('/meal/{id}', 'create')->name('create');
+    Route::post('/meal/{date}/store','store');
+});
+
+Route::controller(ConditionController::class)->middleware(['auth', 'verified'])->group(function(){
+    //Route::get('/condition/{id}', 'create')->name('create');
+    Route::post('/condition/{date}/store','store');
 });
 
 Route::middleware('auth')->group(function () {

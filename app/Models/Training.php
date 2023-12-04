@@ -14,8 +14,9 @@ class Training extends Model
         'value',
         'comment',
         'training_kind_id',
-        'user_id'
+        'user_id',
         ];
+    
     public function user(){
         return $this->belongsTo(User::class);
     }
@@ -28,7 +29,7 @@ class Training extends Model
         return $this->hasMany(TrainingDetail::class);
     }
     
-    public function Training_kind(){
+    public function training_kind(){
         return $this->belongsTo(TrainingKind::class);
     }
 }

@@ -17,7 +17,6 @@ if (calendarEl !== null) {
         // カレンダー表示
         initialView: "dayGridMonth", // 最初に表示させるページの形式
         dateClick: function(e){
-            console.log(e);
             const inputDate = document.getElementById("date");
             inputDate.value = e.dateStr;
             document.getElementById("calendarCreate").submit();
@@ -42,12 +41,18 @@ if (calendarEl !== null) {
                 calendar.removeAllEvents(); // ver.6でもどうやら使える（ドキュメントにはない？）
                 // カレンダーに読み込み
                 successCallback(response.data); // successCallbackに予定をオブジェクト型で入れるとカレンダーに表示できる
+                console.log(response.data);
             })
             .catch((error) => {
                 // バリデーションエラーなど
                 alert("登録に失敗しました。");
             });
-    },
+        },
+        
+        eventClick: function(info){
+            document.getElementById("id").value = info.event.id;
+            document.getElementById("calendarDisplay").submit();
+        },
     });
     
     // カレンダーのレンダリング

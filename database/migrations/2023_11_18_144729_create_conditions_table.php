@@ -15,7 +15,17 @@ return new class extends Migration
     {
         Schema::create('conditions', function (Blueprint $table) {
             $table->id();
+            $table->dateTime('date');
+            $table->integer('wake_up_time')->nullable()->constrained();
+            $table->integer('bed_time')->nullable()->constrained();
+            $table->integer('body_temperature')->nullable()->constrained();
+            $table->integer('weight')->nullable()->constrained();
+            $table->integer('subjective_score')->nullable()->constrained();
+            $table->text('comment')->nullable()->constrained();
+            $table->foreignId('symptom_id')->nullable()->constrained();
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
