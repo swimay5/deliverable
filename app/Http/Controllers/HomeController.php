@@ -18,13 +18,22 @@ class HomeController extends Controller
         return view('menu')->with(['date'=>$request['date']]);   
     }
     
-    public function display(Request $request, TrainingKind $trainingKind){
+    public function displayT(Request $request, TrainingKind $trainingKind){
         $id = $request['id'];
         $event = Event::find($id);
         $date = $event->start_date;
         $training = Training::where('user_id', Auth::id())->where('date', $date.' 00:00:00')->first();
         
         return view('Trainings.edit')->with(['date'=>$date, 'training'=>$training, 'trainingKind'=>$trainingKind->get()]);
+    }
+    
+    public function displayM(Request $request, Meal $meal){
+        $id = $request['id'];
+        $event = Event::find($id);
+        $date = $event->start_date;
+        $meal = Meal::where('user_id', Auth::id())->where('date', $date.' 00:00:00')->first();
+        
+        return view('Meals.edit')->with(['date'=>$date, 'meal'=>$meal->get()]);
     }
     
     public function menu($date, $menu, TrainingKind $trainingKind){

@@ -13,7 +13,7 @@
                 @endforeach
             </select>
             <div>
-                <button type='button' id='switching-btn' class='bg-gray-400 hover:bg-gray-300 text-white rounded px-4 py-2'>トレーニング新規作成</button>
+                <button type='button' id='switching-btn' class='bg-red-300 hover:bg-red-200 text-white rounded px-4 py-2'>トレーニング新規作成</button>
                 <div id='input-kind' class='hidden'>
                     <input type='text' name='training_kind[name]'/>
                 </div>

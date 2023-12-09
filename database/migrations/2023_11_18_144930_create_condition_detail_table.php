@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('condition_detail', function (Blueprint $table) {
             $table->id();
-            $table->string('image')->nullable();
-            $table->string('movie')->nullable();
-            $table->string('document')->nullable();
+            $table->string('image')->nullable()->constrained();
+            $table->string('movie')->nullable()->constrained();
+            $table->string('document')->nullable()->constrained();
             $table->text('comment')->nullable()->constrained();
             $table->foreignId('condition_id')->nullable()->constrained();
             $table->foreignId('user_id')->constrained();

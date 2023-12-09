@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('meal_time', function (Blueprint $table) {
             $table->id();
-            $table->integer('meal_kind');
+            $table->integer('meal_kind')->nullable()->constrained();
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
             $table->softDeletes();
