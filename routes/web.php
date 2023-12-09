@@ -20,7 +20,7 @@ use App\Http\Controllers\EventController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('new-welcome');
 });
 
 Route::get('/dashboard', function () {
@@ -31,7 +31,8 @@ Route::controller(HomeController::class)->middleware(['auth', 'verified'])->grou
     Route::get('/home', 'show')->name('home');
     Route::get('/home/{training}', 'post')->name('create-training');
     Route::post('/calendar/create', 'create');
-    Route::post('calendar/display', 'display');
+    Route::post('calendar/displayT', 'displayT');
+    Route::post('calendar/displayM', 'displayM');
     Route::get('/menu/{date}/{menu}', 'menu');
     //Route::get('/calendar/create', 'create');
 });

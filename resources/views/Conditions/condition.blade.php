@@ -7,10 +7,11 @@
         </h2>
         <p>就寝時刻（昨日）</p>
         <input type="text">
-        <p>時</p>
+        <p class="flex flex-row">時</p>
+        <br>
         <p>起床時刻（今日）</p>
         <input type="text">
-        <p>時</p>
+        <p class="flex flex-row">時</p>
         <p>体温</p>
         <input type="text">
         <p>℃</p>
