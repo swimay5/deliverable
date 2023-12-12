@@ -44,8 +44,8 @@ class MealController extends Controller
                     'event_title'=>'MEAL',
                     'start_date'=>$date,
                     'end_date'=>$date,
-                    'event_color'=>'#adffff',
-                    'event_border_color'=>'#adffff',
+                    'event_color'=>'#60A5FA',
+                    'event_border_color'=>'#60A5FA',
                     'user_id'=>Auth::id()
                     ])->save();
                     
@@ -77,8 +77,8 @@ class MealController extends Controller
                     'event_title'=>'MEAL',
                     'start_date'=>$date,
                     'end_date'=>$date,
-                    'event_color'=>'#adffff',
-                    'event_border_color'=>'#adffff',
+                    'event_color'=>'#60A5FA',
+                    'event_border_color'=>'#60A5FA',
                     'user_id'=>Auth::id()
                     ])->save();
                     
@@ -111,8 +111,8 @@ class MealController extends Controller
                     'event_title'=>'MEAL',
                     'start_date'=>$date,
                     'end_date'=>$date,
-                    'event_color'=>'#adffff',
-                    'event_border_color'=>'#adffff',
+                    'event_color'=>'#60A5FA',
+                    'event_border_color'=>'#60A5FA',
                     'user_id'=>Auth::id()
                     ])->save();
                     
@@ -144,8 +144,8 @@ class MealController extends Controller
                     'event_title'=>'MEAL',
                     'start_date'=>$date,
                     'end_date'=>$date,
-                    'event_color'=>'#adffff',
-                    'event_border_color'=>'#adffff',
+                    'event_color'=>'#60A5FA',
+                    'event_border_color'=>'#60A5FA',
                     'user_id'=>Auth::id()
                     ])->save();
                     

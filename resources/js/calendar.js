@@ -51,6 +51,7 @@ if (calendarEl !== null) {
         
         eventClick: function(info){
             document.getElementById("id").value = info.event.id;
+            document.getElementById("title").value = info.event.title;
             document.getElementById("calendarDisplay").submit();
         },
     });

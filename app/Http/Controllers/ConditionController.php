@@ -31,8 +31,8 @@ class ConditionController extends Controller
             'event_title'=>'CONDITION', 
             'start_date'=>$date, 
             'end_date'=>$date, 
-            'event_color'=>'#adffad', 
-            'event_border_color'=>'#adffad', 
+            'event_color'=>'#6EE7B7', 
+            'event_border_color'=>'#6EE7B7', 
             'user_id'=>Auth::id()
             ];
         $event -> fill($input) -> save();

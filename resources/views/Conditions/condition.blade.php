@@ -7,14 +7,14 @@
         </h2>
         <p>就寝時刻（昨日）</p>
         <input type="text">
-        <p class="flex flex-row">時</p>
+        <p class="flex-row">時</p>
         <br>
         <p>起床時刻（今日）</p>
         <input type="text">
         <p class="flex flex-row">時</p>
         <p>体温</p>
         <input type="text">
-        <p>℃</p>
+        <p class="flex-row">℃</p>
         <p>体重</p>
         <input type="text">
         <p>kg</p>
@@ -46,7 +46,7 @@
         <label for='symptoms[menstruation]'>生理痛</label>
         <label for='symptoms[others]'>その他</label>
         <input id='others' type='text' name='symptoms[others]'>
-        
+
         
         <h2>コメント</h2>
         <textarea></textarea>
