@@ -31,8 +31,7 @@ Route::controller(HomeController::class)->middleware(['auth', 'verified'])->grou
     Route::get('/home', 'show')->name('home');
     Route::get('/home/{training}', 'post')->name('create-training');
     Route::post('/calendar/create', 'create');
-    Route::post('calendar/displayT', 'displayT');
-    Route::post('calendar/displayM', 'displayM');
+    Route::post('calendar/display', 'display');
     Route::get('/menu/{date}/{menu}', 'menu');
     //Route::get('/calendar/create', 'create');
 });

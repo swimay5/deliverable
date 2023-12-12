@@ -44,8 +44,8 @@ class TrainingController extends Controller
             'event_title'=>'TRAINING', 
             'start_date'=>$date, 
             'end_date'=>$date, 
-            'event_color'=>'#ffadff', 
-            'event_border_color'=>'#ffadff', 
+            'event_color'=>'#F472B6', 
+            'event_border_color'=>'#F472B6', 
             'user_id'=>Auth::id()
             ];
         $event -> fill($input) -> save();

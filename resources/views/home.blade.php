@@ -14,6 +14,7 @@
 	    <form method="post" action="/calendar/display" id="calendarDisplay">
 	        @csrf
 	    	<input type="text" class="hidden" id="id" name="id" value="" />
+	    	<input type="text" class="hidden" id="title" name="title" value="" />
 	    </form>
 	</div>
 </x-app-layout>
